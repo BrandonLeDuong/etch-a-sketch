@@ -10,3 +10,7 @@
 .grid-cell {
   background-color: rgb(25, 129, 55);
 }
+
+.grid-cell:hover {
+  background-color: brown;
+}
