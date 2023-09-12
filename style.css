@@ -25,3 +25,10 @@ body {
 .grid-cell {
   background-color: rgb(249, 241, 241);
 }
+
+#main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}

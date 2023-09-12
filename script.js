@@ -1,3 +1,5 @@
+var reset = document.getElementById("reset");
+
 function createGrid(rows, columns) {
   const container = document.getElementById("grid-container");
   // Loop through rows and columns to create the cells
@@ -17,8 +19,21 @@ function addHoverEffectToGridCells() {
   const gridCells = document.querySelectorAll(".grid-cell");
   gridCells.forEach((cell) => {
     cell.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = "orange";
+      event.target.style.backgroundColor = "black";
       console.log(event);
     });
   });
 }
+
+function removeHoverEffectToGridCells() {
+  const resetButton = document.querySelector("button");
+  resetButton.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((item) => {
+      item.style.backgroundColor = "";
+    });
+  });
+}
+
+removeHoverEffectToGridCells();
+addHoverEffectToGridCells();
