@@ -11,4 +11,14 @@ function createGrid(rows, columns) {
   }
 }
 
-createGrid(16, 16);
+createGrid(64, 64);
+
+function addHoverEffectToGridCells() {
+  const gridCells = document.querySelectorAll(".grid-cell");
+  gridCells.forEach((cell) => {
+    cell.addEventListener("mouseover", (event) => {
+      event.target.style.backgroundColor = "orange";
+      console.log(event);
+    });
+  });
+}

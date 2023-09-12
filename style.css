@@ -1,16 +1,27 @@
+body {
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #grid-container {
   display: grid;
-  width: 500px;
-  height: 500px;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
-  gap: 10px; /* Add a 1px gap between cells */
+  width: 700px;
+  height: 700px;
+  grid-template-columns: repeat(64, 1fr);
+  grid-template-rows: repeat(64, 1fr);
+  gap: 2px; /* Add a 1px gap between cells */
+  border: 2px solid rgb(73, 113, 178);
 }
 
 .grid-cell {
-  background-color: rgb(25, 129, 55);
-}
-
-.grid-cell:hover {
-  background-color: brown;
+  background-color: rgb(249, 241, 241);
 }
