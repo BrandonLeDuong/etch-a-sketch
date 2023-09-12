@@ -1,8 +1,7 @@
 #grid-container {
   display: grid;
-  width: 500px; /* Each cell will be 20px wide (16 cells x 20px) */
-  height: 500px; /* Each cell will be 20px tall (16 cells x 20px) */
-  display: grid;
+  width: 500px;
+  height: 500px;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
   gap: 10px; /* Add a 1px gap between cells */
