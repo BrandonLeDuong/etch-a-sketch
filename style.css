@@ -1,5 +1,5 @@
 body {
-  font-family: cursive;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
   font-weight: bold;
 }
@@ -19,7 +19,7 @@ body {
   /* grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr); */
   gap: 2px; /* Add a 1px gap between cells */
-  border: 2px solid rgb(73, 113, 178);
+  border: 3px solid rgb(20, 23, 27);
 }
 
 .grid-cell {
@@ -36,4 +36,64 @@ body {
 #container-2 {
   display: flex;
   flex-direction: column;
+  margin-top: 200px;
+  margin-right: 30px;
+  gap: 20px;
+  padding: 50px;
+}
+
+.slider-info {
+  text-align: center;
+  margin-bottom: -5px;
+  font-size: 20px;
+}
+
+/* CSS */
+#reset,
+#rgb,
+#eraser,
+#colorPicker,
+#default {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.button-23:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.button-23:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
 }

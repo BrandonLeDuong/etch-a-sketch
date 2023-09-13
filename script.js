@@ -18,12 +18,14 @@ function createGrid(rows, cols) {
 }
 
 function update() {
+  const sliderInfo = document.querySelector(".slider-info");
   var numRows = XYslider.value;
   var numCols = XYslider.value;
   const container = document.getElementById("grid-container");
   // Update the grid template columns CSS property of the grid container
   container.style.gridTemplateColumns = `repeat(${XYslider.value}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${XYslider.value}, 1fr)`;
+  sliderInfo.textContent = numRows + " x " + numCols;
 
   createGrid(numRows, numCols);
 }
@@ -41,7 +43,7 @@ function addHoverEffectToGridCells() {
 }
 
 function removeHoverEffectToGridCells() {
-  const resetButton = document.querySelector("button");
+  const resetButton = document.querySelector("#reset");
   resetButton.addEventListener("click", () => {
     const gridCells = document.querySelectorAll(".grid-cell");
     gridCells.forEach((item) => {
@@ -50,6 +52,23 @@ function removeHoverEffectToGridCells() {
   });
 }
 
+function addRgbEffectsToGridCells() {
+  const rbgButton = document.querySelector("#rgb");
+  rbgButton.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => {
+      cell.addEventListener("mouseover", (event) => {
+        let redValue = Math.floor(Math.random() * 256);
+        let greenValue = Math.floor(Math.random() * 256);
+        let blueValue = Math.floor(Math.random() * 256);
+        event.target.style.backgroundColor =
+          event.target.style.backgroundColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+      });
+    });
+  });
+}
+
 removeHoverEffectToGridCells();
 addHoverEffectToGridCells();
+addRgbEffectsToGridCells();
 update();
