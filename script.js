@@ -1,19 +1,34 @@
 var reset = document.getElementById("reset");
+var sliderXY = document.getElementById("XYslider");
 
-function createGrid(rows, columns) {
+function createGrid(rows, cols) {
   const container = document.getElementById("grid-container");
+  container.innerHTML = ""; // Clear previous grid cells
+
   // Loop through rows and columns to create the cells
   for (let row = 0; row < rows; row++) {
-    for (let col = 0; col < columns; col++) {
+    for (let col = 0; col < cols; col++) {
       // Create a new cell element
       const cell = document.createElement("div");
       cell.classList.add("grid-cell");
       container.appendChild(cell);
     }
   }
+  addHoverEffectToGridCells();
 }
 
-createGrid(64, 64);
+function update() {
+  var numRows = XYslider.value;
+  var numCols = XYslider.value;
+  const container = document.getElementById("grid-container");
+  // Update the grid template columns CSS property of the grid container
+  container.style.gridTemplateColumns = `repeat(${XYslider.value}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${XYslider.value}, 1fr)`;
+
+  createGrid(numRows, numCols);
+}
+
+sliderXY.addEventListener("input", update);
 
 function addHoverEffectToGridCells() {
   const gridCells = document.querySelectorAll(".grid-cell");
@@ -37,3 +52,4 @@ function removeHoverEffectToGridCells() {
 
 removeHoverEffectToGridCells();
 addHoverEffectToGridCells();
+update();
