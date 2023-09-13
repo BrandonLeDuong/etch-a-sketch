@@ -65,6 +65,18 @@ function defaultHoverEffectToGridCells() {
     });
   });
 }
+function eraseHoverEffectToGridCells() {
+  const eraseButton = document.querySelector("#eraser");
+  console.log(eraseButton);
+  eraseButton.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => {
+      cell.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "";
+      });
+    });
+  });
+}
 
 function removeHoverEffectToGridCells() {
   const resetButton = document.querySelector("#reset");
@@ -93,6 +105,7 @@ function addRgbEffectsToGridCells() {
 }
 
 removeHoverEffectToGridCells();
+eraseHoverEffectToGridCells();
 addHoverEffectToGridCells();
 addRgbEffectsToGridCells();
 defaultHoverEffectToGridCells();
