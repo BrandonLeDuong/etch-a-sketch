@@ -1,7 +1,33 @@
 body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
-  font-weight: bold;
+
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  margin-left: 6px;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 120px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+}
+
+#footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 0px;
+  padding: 0px;
 }
 
 #container {
@@ -19,7 +45,8 @@ body {
   /* grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr); */
   gap: 2px; /* Add a 1px gap between cells */
-  border: 3px solid rgb(20, 23, 27);
+  border: 50px solid rgb(134, 1, 1);
+  box-shadow: 8px 8px 0px black;
 }
 
 .grid-cell {
@@ -53,7 +80,7 @@ body {
 #rgb,
 #eraser,
 #colorPicker,
-#default {
+#default-btn {
   background-color: #ffffff;
   border: 1px solid #222222;
   border-radius: 8px;
@@ -78,6 +105,10 @@ body {
   user-select: none;
   -webkit-user-select: none;
   width: auto;
+}
+button:hover {
+  transform: transform 0.1s;
+  transform: scale(1.02);
 }
 
 .button-23:focus-visible {

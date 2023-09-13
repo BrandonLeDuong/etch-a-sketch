@@ -32,12 +32,36 @@ function update() {
 
 sliderXY.addEventListener("input", update);
 
+function colorPicker() {
+  const colorPickerInput = document.getElementById("colorPicker");
+  colorPickerInput.addEventListener("input", () => {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => {
+      cell.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = colorPickerInput.value;
+      });
+    });
+  });
+}
+
 function addHoverEffectToGridCells() {
   const gridCells = document.querySelectorAll(".grid-cell");
   gridCells.forEach((cell) => {
     cell.addEventListener("mouseover", (event) => {
       event.target.style.backgroundColor = "black";
-      console.log(event);
+    });
+  });
+}
+
+function defaultHoverEffectToGridCells() {
+  const defaultButton = document.querySelector("#default-btn");
+
+  defaultButton.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".grid-cell");
+    gridCells.forEach((cell) => {
+      cell.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "black";
+      });
     });
   });
 }
@@ -71,4 +95,6 @@ function addRgbEffectsToGridCells() {
 removeHoverEffectToGridCells();
 addHoverEffectToGridCells();
 addRgbEffectsToGridCells();
+defaultHoverEffectToGridCells();
+colorPicker();
 update();
