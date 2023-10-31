@@ -1,8 +1,7 @@
 body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
-
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(216, 206, 206, 0.691);
   display: flex;
   flex-direction: column;
   gap: 10px;
