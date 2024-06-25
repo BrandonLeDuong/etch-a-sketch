@@ -4,7 +4,7 @@ A simple Etch-a-Sketch web application built with JavaScript, HTML, and CSS.
 
 ![image](https://github.com/BrandonLeDuong/etch-a-sketch/assets/98068872/198aaa0a-24a1-4bd0-9a35-d81236426597)
 
-My implementation of the Etch-a-Sketch project for The Odin Project. Try it [here](https://brandonleduong.github.io/etch-a-sketch/)!
+My implementation of the Etch-a-Sketch project for The Odin Project. Try it [here](https://baoduong47.github.io/etch-a-sketch/)!
 
 
 ## Table of Contents
